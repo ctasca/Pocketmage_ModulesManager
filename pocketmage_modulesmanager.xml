@@ -1,5 +1,5 @@
 <_>
-   <form_key>W4IeU5MV4ffGF95Z</form_key>
+   <form_key>B1NbAhwQGn5PG7Kc</form_key>
    <name>pocketmage_modulesmanager</name>
    <channel>community</channel>
    <version_ids>
@@ -13,9 +13,9 @@ The module works by automatically setting active node either to &apos;true&apos;
 Tested in git, reverting the status to original status sees the file as not modified.</description>
    <license>OSL 3.0</license>
    <license_uri>http://opensource.org/licenses/osl-3.0.php</license_uri>
-   <version>1.0.0</version>
+   <version>1.1.0</version>
    <stability>stable</stability>
-   <notes>First Stable Release version 1.0.0</notes>
+   <notes>Removes Enterprise edition modules from the list</notes>
    <authors>
       <name>
          <name>Carlo Tasca</name>
@@ -44,7 +44,7 @@ Tested in git, reverting the status to original status sees the file as not modi
             <max/>
          </max>
          <files>
-            <files>   </files>
+            <files>      </files>
          </files>
       </package>
       <extension>
@@ -64,7 +64,7 @@ Tested in git, reverting the status to original status sees the file as not modi
          <target>magelocal</target>
          <target>magelocal</target>
          <target>magedesign</target>
-         <target>magelocal</target>
+         <target>magedesign</target>
          <target>mage</target>
          <target>mageetc</target>
       </target>
