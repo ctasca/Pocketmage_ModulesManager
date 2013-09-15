@@ -29,7 +29,7 @@
     <modules>
         <Pocketmage_ModulesManager>
             <active>true</active>
-            <codePool>community</codePool>
+            <codePool>local</codePool>
         </Pocketmage_ModulesManager>
     </modules>
 </config>
