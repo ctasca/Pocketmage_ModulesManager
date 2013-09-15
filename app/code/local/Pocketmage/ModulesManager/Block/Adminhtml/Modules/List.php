@@ -37,6 +37,7 @@
 class Pocketmage_ModulesManager_Block_Adminhtml_Modules_List extends Mage_Adminhtml_Block_Template
 {
     const MAGE_MATCH = "#^Mage_#";
+    const ENTERPRISE_MATCH = "#^Enterprise_#";
     const POCKETMAGE_MATCH = "#Pocketmage_ModulesManager#";
 
     protected $_xml;
@@ -152,7 +153,7 @@ class Pocketmage_ModulesManager_Block_Adminhtml_Modules_List extends Mage_Adminh
         $iterator = new DirectoryIterator($modulesDir);
 
         foreach ($iterator as $filename) {
-            if ($filename->isDot() || preg_match(self::MAGE_MATCH, $filename->getFilename()) || preg_match(self::POCKETMAGE_MATCH, $filename->getFilename()) || !$this->_isXmlFile($filename->getFilename())) {
+            if ($filename->isDot() || preg_match(self::MAGE_MATCH, $filename->getFilename()) || preg_match(self::ENTERPRISE_MATCH, $filename->getFilename()) || preg_match(self::POCKETMAGE_MATCH, $filename->getFilename()) || !$this->_isXmlFile($filename->getFilename())) {
                 continue;
             }
 
@@ -219,7 +220,7 @@ class Pocketmage_ModulesManager_Block_Adminhtml_Modules_List extends Mage_Adminh
     protected function _getButtonHtml ($id, $active)
     {
         if ($active == 'true') {
-           return <<<HTML
+            return <<<HTML
             <input type="hidden" name="button-type-disable" value="1" />
             <button id="id_{$id}" title="Disable" type="button" class="scalable" onclick="managerButton.save('{$id}-form')"  style="width:80px"><span><span><span>Disable</span></span></span></button>
 HTML;
